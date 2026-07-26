@@ -1,0 +1,42 @@
+#include <stdio.h>
+#include <unistd.h>
+
+
+char	ft_check_dic(char	*argv[1])
+{
+	if (strcmp(*argv[1]))
+	{
+		//open the file and write the words with remove spaces
+	}
+}
+
+char    ft_remove_spaces(char	*argv[1])
+{
+    int	i;
+	int	j;
+
+	i = 0;
+	j = 0;
+    while (argv[i])
+    {
+        if (ft_is_numeric(argv[i]))
+        {
+            argv[j] = argv[i];
+			j++;
+			
+			if (argv[i + 1] == '9' ||  argv[i + 1] == ' ')
+			{
+				argv[j + 1] = ' ';
+			}
+        }
+		i++;
+    }
+	argv[j] = argv[i];
+	j = 0;
+	while(argv[j])
+	{
+		write(1, &argv[i], 1);
+		j++;
+	}
+	return (*argv);
+}
