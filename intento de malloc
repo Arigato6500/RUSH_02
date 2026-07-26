@@ -1,0 +1,9 @@
+#include <stdlib.h>
+char    *ft_size_malloc()
+{
+    file = (char *)malloc(sizeof(char ) * (size + 1));
+
+    size_t size;
+    free(file);
+    return (0);
+}
